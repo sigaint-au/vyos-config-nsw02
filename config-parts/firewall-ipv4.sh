@@ -26,7 +26,7 @@ set firewall ipv4 name WAN-WIFI rule 110 state 'invalid'
 ##
 # LOCAL -> WAN
 #
-set firewall ipv4 name LOCAL-WAN default-action 'reject'
+set firewall ipv4 name LOCAL-WAN default-action 'accept'
 set firewall ipv4 name LOCAL-WAN default-log
 
 # DHCP
