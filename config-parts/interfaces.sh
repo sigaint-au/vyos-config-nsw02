@@ -22,9 +22,11 @@ set interfaces pppoe pppoe0 authentication username "$secret_ppoe_username"
 set interfaces pppoe pppoe0 ip adjust-mss 'clamp-mss-to-pmtu'
 set interfaces pppoe pppoe0 mtu '1492'
 set interfaces pppoe pppoe0 source-interface 'eth0'
-
 set interfaces pppoe pppoe0 dhcpv6-options pd 0 interface eth1 sla-id '0'
-
 set interfaces pppoe pppoe0 dhcpv6-options pd 0 length '48'
 set interfaces pppoe pppoe0 dhcpv6-options rapid-commit
 set interfaces pppoe pppoe0 ipv6 address autoconf
+
+# LAN
+set interfaces ethernet eth1 address '10.130.0.1/16'
+set interfaces ethernet eth1 description 'NEW_NSW02_WIFI'
