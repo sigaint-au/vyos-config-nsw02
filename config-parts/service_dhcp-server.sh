@@ -2,6 +2,9 @@
 
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option default-router '10.130.0.1'
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option domain-name 'sigaint.au'
+set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 subnet-id '1'
+
+
 
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option name-server '45.90.28.189'
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option name-server '45.90.30.189'

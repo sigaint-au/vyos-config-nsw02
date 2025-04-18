@@ -15,3 +15,12 @@ set firewall zone WIFI from WAN firewall name 'WAN-WIFI'
 set firewall zone WIFI from LOCAL firewall name 'LOCAL-WIFI'
 #set firewall zone WIFI from LOCAL firewall ipv6-name 'LOCAL-WIFI-6'
 set firewall zone WIFI member interface 'eth1'
+
+set firewall zone WAN default-action 'reject'
+set firewall zone WAN default-log
+set firewall zone WAN description 'The Internet'
+set firewall zone WAN from LOCAL firewall name 'LOCAL-WAN'
+#set firewall zone WAN from LOCAL firewall ipv6-name 'LOCAL-WAN-6'
+set firewall zone WAN from WIFI firewall name 'WIFI-WAN'
+#set firewall zone WAN from WIFI firewall ipv6-name 'WIFI-WAN-6'
+set firewall zone WAN member interface 'pppoe0'
