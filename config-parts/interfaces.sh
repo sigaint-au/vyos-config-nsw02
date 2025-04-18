@@ -23,9 +23,8 @@ set interfaces pppoe pppoe0 ip adjust-mss 'clamp-mss-to-pmtu'
 set interfaces pppoe pppoe0 mtu '1492'
 set interfaces pppoe pppoe0 source-interface 'eth0'
 
-set interfaces ethernet pppoe0 dhcpv6-options pd 0 interface eth1 address '1'
-set interfaces ethernet pppoe0 dhcpv6-options pd 0 interface eth1 sla-id '0'
+set interfaces pppoe pppoe0 dhcpv6-options pd 0 interface eth1 sla-id '0'
 
-set interfaces ethernet pppoe0 dhcpv6-options pd 0 length '48'
-set interfaces ethernet pppoe0 dhcpv6-options rapid-commit
-set interfaces ethernet pppoe0 ipv6 address autoconf
+set interfaces pppoe pppoe0 dhcpv6-options pd 0 length '48'
+set interfaces pppoe pppoe0 dhcpv6-options rapid-commit
+set interfaces pppoe pppoe0 ipv6 address autoconf
