@@ -4,8 +4,6 @@ set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 optio
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option domain-name 'sigaint.au'
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 subnet-id '1'
 
-
-
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option name-server '45.90.28.189'
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option name-server '45.90.30.189'
 
@@ -26,3 +24,6 @@ set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 stati
 
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 static-mapping tplink-sw1 ip-address '10.130.1.250'
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 static-mapping tplink-sw1 mac 'f0:09:0d:78:1e:c1'
+
+set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 static-mapping example-pc ip-address '10.130.99.99'
+set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 static-mapping example-pc mac 'f0:09:0d:78:99:99'
