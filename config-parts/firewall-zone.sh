@@ -6,7 +6,7 @@ set firewall zone LOCAL description 'Local zone'
 set firewall zone LOCAL from WAN firewall name 'WAN-LOCAL'
 set firewall zone LOCAL from WIFI firewall name 'WIFI-LOCAL'
 set firewall zone LOCAL from VPN firewall name 'VPN-LOCAL'
-set firewall zone LOCAL from VPN firewall ipv6-name 'VPN-LOCAL-6'
+#set firewall zone LOCAL from VPN firewall ipv6-name 'VPN-LOCAL-6'
 set firewall zone LOCAL local-zone
 
 set firewall zone WIFI default-action 'reject'
