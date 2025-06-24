@@ -116,3 +116,13 @@ set firewall ipv4 name VPN-WIFI rule 100 action 'accept'
 set firewall ipv4 name WIFI-VPN default-action 'reject'
 set firewall ipv4 name WIFI-VPN default-log
 set firewall ipv4 name WIFI-VPN rule 100 action 'accept'
+
+# VPN -> LOCAL
+set firewall ipv4 name VPN-LOCAL default-action 'reject'
+set firewall ipv4 name VPN-LOCAL default-log
+set firewall ipv4 name VPN-LOCAL rule 100 action 'accept'
+
+# LOCAL -> VPN
+set firewall ipv4 name LOCAL-VPN default-action 'reject'
+set firewall ipv4 name LOCAL-VPN default-log
+set firewall ipv4 name LOCAL-VPN rule 100 action 'accept'

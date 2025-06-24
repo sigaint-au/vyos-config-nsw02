@@ -5,6 +5,8 @@ set firewall zone LOCAL description 'Local zone'
 #set firewall zone LOCAL from WIFI firewall ipv6-name 'WIFI-LOCAL-6'
 set firewall zone LOCAL from WAN firewall name 'WAN-LOCAL'
 set firewall zone LOCAL from WIFI firewall name 'WIFI-LOCAL'
+set firewall zone LOCAL from VPN firewall name 'VPN-LOCAL'
+set firewall zone LOCAL from VPN firewall ipv6-name 'VPN-LOCAL-6'
 set firewall zone LOCAL local-zone
 
 set firewall zone WIFI default-action 'reject'
@@ -32,4 +34,6 @@ set firewall zone VPN default-log
 set firewall zone VPN description 'VPN Site-to-Site'
 set firewall zone VPN from WIFI firewall name 'WIFI-VPN'
 #set firewall zone VPN from WIFI firewall ipv6-name 'WIFI-VPN-6'
+set firewall zone VPN from LOCAL firewall name 'LOCAL-VPN'
+#set firewall zone VPN from LOCAL firewall ipv6-name 'LOCAL-VPN-6'
 set firewall zone VPN member interface 'wg600'
