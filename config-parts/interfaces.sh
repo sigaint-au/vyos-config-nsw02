@@ -38,5 +38,6 @@ set interfaces wireguard wg600 peer NSW01_WG_1 address '103.214.222.109'
 set interfaces wireguard wg600 peer NSW01_WG_1 allowed-ips '10.120.0.0/16'
 set interfaces wireguard wg600 peer NSW01_WG_1 persistent-keepalive '25'
 set interfaces wireguard wg600 peer NSW01_WG_1 port '51820'
+set interfaces wireguard wg600 peer NSW01_WG_1 preshared-key "$secret_wireguard_wg600_psk"
 set interfaces wireguard wg600 peer NSW01_WG_1 public-key "$secret_wireguard_wg600_public_key"
 set interfaces wireguard wg600 private-key "$secret_wireguard_wg600_private_key"

@@ -99,7 +99,7 @@ set firewall ipv4 name WIFI-LOCAL rule 130 destination port '22'
 set firewall ipv4 name WIFI-LOCAL rule 130 protocol 'tcp'
 
 # LOCAL -> WIFI
-set firewall ipv4 name LOCAL-WIFI default-action 'reject'
+set firewall ipv4 name LOCAL-WIFI default-action 'accept'
 set firewall ipv4 name LOCAL-WIFI default-log
 set firewall ipv4 name LOCAL-WIFI rule 100 action 'accept'
 set firewall ipv4 name LOCAL-WIFI rule 100 state 'established'
