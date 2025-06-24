@@ -34,6 +34,7 @@ set interfaces ethernet eth1 description 'NEW_NSW02_WIFI'
 # NEWCASTLE #
 set interfaces wireguard wg600 address '172.16.8.2/31'
 set interfaces wireguard wg600 description 'Lanham VPN Tunnel'
+set interfaces wireguard wg600 port 51820
 set interfaces wireguard wg600 peer NSW01_WG_1 address '103.214.222.109'
 set interfaces wireguard wg600 peer NSW01_WG_1 allowed-ips '10.120.0.0/16'
 set interfaces wireguard wg600 peer NSW01_WG_1 persistent-keepalive '25'
