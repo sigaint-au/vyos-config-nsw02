@@ -106,3 +106,13 @@ set firewall ipv4 name LOCAL-WIFI rule 100 state 'established'
 set firewall ipv4 name LOCAL-WIFI rule 100 state 'related'
 set firewall ipv4 name LOCAL-WIFI rule 110 action 'reject'
 set firewall ipv4 name LOCAL-WIFI rule 110 state 'invalid'
+
+# VPN -> LOCAL
+set firewall ipv4 name VPN-WIFI default-action 'reject'
+set firewall ipv4 name VPN-WIFI default-log
+set firewall ipv4 name VPN-WIFI rule 100 action 'accept'
+
+# VPN -> WIFI
+set firewall ipv4 name WIFI-VPN default-action 'reject'
+set firewall ipv4 name WIFI-VPN default-log
+set firewall ipv4 name WIFI-VPN rule 100 action 'accept'
