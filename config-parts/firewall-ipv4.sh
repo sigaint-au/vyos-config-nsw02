@@ -19,11 +19,6 @@ set firewall ipv4 name WAN-LOCAL rule 130 description 'SSH'
 set firewall ipv4 name WAN-LOCAL rule 130 destination port '22'
 set firewall ipv4 name WAN-LOCAL rule 130 protocol 'tcp'
 
-set firewall ipv4 name WAN-LOCAL rule 140 action 'accept'
-set firewall ipv4 name WAN-LOCAL rule 140 description 'PLex'
-set firewall ipv4 name WAN-LOCAL rule 140 destination port '32400'
-set firewall ipv4 name WAN-LOCAL rule 140 protocol 'tcp_udp'
-
 
 # WAN -> WIFI
 set firewall ipv4 name WAN-WIFI default-action 'reject'
@@ -33,6 +28,12 @@ set firewall ipv4 name WAN-WIFI rule 100 state 'established'
 set firewall ipv4 name WAN-WIFI rule 100 state 'related'
 set firewall ipv4 name WAN-WIFI rule 110 action 'reject'
 set firewall ipv4 name WAN-WIFI rule 110 state 'invalid'
+# Plex NAT
+set firewall ipv4 name WAN-WIFI rule 120 description 'NAT: Plex'
+set firewall ipv4 name WAN-WIFI rule 120 destination address '10.130.1.4'
+set firewall ipv4 name WAN-WIFI rule 120 destination port '32400'
+set firewall ipv4 name WAN-WIFI rule 120 protocol 'tcp'
+set firewall ipv4 name WAN-WIFI rule 120 action 'accept'
 
 ##
 # LOCAL -> WAN
@@ -63,6 +64,7 @@ set firewall ipv4 name LOCAL-WAN rule 130 description 'DNS Servers'
 set firewall ipv4 name LOCAL-WAN rule 130 destination group address-group 'DNS_SERVERS'
 set firewall ipv4 name LOCAL-WAN rule 130 destination port '53'
 set firewall ipv4 name LOCAL-WAN rule 130 protocol 'udp'
+
 # Google NTP Servers
 set firewall ipv4 name LOCAL-WAN rule 140 action 'accept'
 set firewall ipv4 name LOCAL-WAN rule 140 description 'NTP Servers'
@@ -106,6 +108,7 @@ set firewall ipv4 name LOCAL-WIFI rule 100 state 'established'
 set firewall ipv4 name LOCAL-WIFI rule 100 state 'related'
 set firewall ipv4 name LOCAL-WIFI rule 110 action 'reject'
 set firewall ipv4 name LOCAL-WIFI rule 110 state 'invalid'
+
 
 # VPN -> LOCAL
 set firewall ipv4 name VPN-WIFI default-action 'reject'
