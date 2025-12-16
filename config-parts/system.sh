@@ -6,10 +6,10 @@ set system host-name '$host_system_host_name'
 set system time-zone 'Australia/Sydney'
 
 # System DNS set to NextDNS
-set system name-server '45.90.28.189'
-set system name-server '45.90.30.189'
-set system name-server '2a07:a8c0::2a:b561'
-set system name-server '2a07:a8c1::2a:b561'
+set system name-server '76.76.2.159'
+set system name-server '76.76.10.159'
+set system name-server '2606:1a40:0:e:d4c0:9e70:4818:0'
+set system name-server '2606:1a40:1:e:d4c0:9e70:4818:0'
 
 # Device requires this baud rate
 # Set in bootloader
