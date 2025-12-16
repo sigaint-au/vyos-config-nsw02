@@ -4,8 +4,8 @@ set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 optio
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option domain-name 'sigaint.au'
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 subnet-id '1'
 
-set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option name-server '45.90.28.189'
-set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option name-server '45.90.30.189'
+set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option name-server '76.76.2.159'
+set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 option name-server '76.76.10.159'
 
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 range 0 start '10.130.0.100'
 set service dhcp-server shared-network-name NEWCASTLE subnet 10.130.0.0/16 range 0 stop '10.130.0.200'
