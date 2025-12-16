@@ -3,10 +3,10 @@
 ####
 ## DNS Servers
 ##
-set firewall group address-group DNS_SERVERS address '45.90.28.189'
-set firewall group address-group DNS_SERVERS address '45.90.30.189'
-set firewall group ipv6-address-group DNS_SERVERS_6 address '2a07:a8c0::2a:b561'
-set firewall group ipv6-address-group DNS_SERVERS_6 address '2a07:a8c1::2a:b561'
+set firewall group address-group DNS_SERVERS address '76.76.2.159'
+set firewall group address-group DNS_SERVERS address '76.76.10.159'
+set firewall group ipv6-address-group DNS_SERVERS_6 address '2606:1a40:0:e:d4c0:9e70:4818:0'
+set firewall group ipv6-address-group DNS_SERVERS_6 address '2606:1a40:1:e:d4c0:9e70:4818:0'
 
 ####
 ## WireGuard Peers
