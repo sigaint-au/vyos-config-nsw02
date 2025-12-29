@@ -19,6 +19,11 @@ set firewall ipv4 name WAN-LOCAL rule 130 description 'SSH'
 set firewall ipv4 name WAN-LOCAL rule 130 destination port '22'
 set firewall ipv4 name WAN-LOCAL rule 130 protocol 'tcp'
 
+set firewall ipv4 name WAN-LOCAL rule 140 action 'accept'
+set firewall ipv4 name WAN-LOCAL rule 140 description 'Rest API'
+set firewall ipv4 name WAN-LOCAL rule 140 destination port '9443'
+set firewall ipv4 name WAN-LOCAL rule 140 protocol 'tcp'
+
 
 # WAN -> WIFI
 set firewall ipv4 name WAN-WIFI default-action 'reject'

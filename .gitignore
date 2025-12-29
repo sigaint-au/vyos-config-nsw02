@@ -6,6 +6,7 @@
 !/apply-config.sh
 !/LICENSE
 !/README.md
+!certificates/
 
 # VyOS config
 !config-parts/
@@ -13,4 +14,7 @@
 !secrets/
 !hosts/
 
-secrets/*.env
+*.env
+*.key
+*.crt
+*.pem
