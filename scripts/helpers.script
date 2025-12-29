@@ -1,0 +1,28 @@
+load_pem() {
+    local file="$1"
+
+    # Basic validation
+    if [[ -z "$file" ]]; then
+        echo "Error: No file provided" >&2
+        return 1
+    fi
+
+    if [[ ! -f "$file" || ! -r "$file" ]]; then
+        echo "Error: File '$file' not found or not readable" >&2
+        return 1
+    fi
+
+    # Try to detect and validate as certificate first
+    if openssl x509 -in "$file" -noout >/dev/null 2>&1; then
+        grep -v '^-----' "$file" | tr -d '\n\r'
+        return 0
+    fi
+
+    # Then try as private key
+    if openssl rsa -in "$file" -noout >/dev/null 2>&1 2>&1 || \
+       openssl ec -in "$file" -noout >/dev/null 2>&1 2>&1; then
+        grep -v '^-----' "$file" | tr -d '\n\r'
+        return 0
+    fi
+}
+
